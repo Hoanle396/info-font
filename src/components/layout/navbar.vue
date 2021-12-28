@@ -34,6 +34,11 @@ export default {
 }
 </script>
 <style>
+.navbar-nav{
+  /* margin-left: 30% !important; */
+  float: right;
+  margin-left:auto;
+}
 header.masthead {
     padding-top: 10.5rem;
     padding-bottom: 6rem;
