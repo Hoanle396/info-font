@@ -75,7 +75,7 @@ export default {
   align-items: center;
   justify-content: center;
   background-size: cover;
-  animation: bg 2s linear infinite alternate;
+ /* animation: bg 2s linear infinite alternate;*/
 }
 @keyframes bg {
   from {
