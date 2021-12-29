@@ -198,6 +198,7 @@ export default {
      this.success=false;
      this.error=false;
       core.post('feedback',this.contact).then(()=>{
+        this.loading=false;
         this.success=true;
         this.contact.fullname="";
         this.contact.email="";
@@ -205,9 +206,9 @@ export default {
         this.contact.content="";
       })
       .catch((err)=>{
+        this.loading=false;
         this.error=err.response.data.error;
       })
-     this.loading=false;
    }
  }
 };
