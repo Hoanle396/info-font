@@ -18,5 +18,6 @@ body{
   background-repeat: no-repeat;
   /* background-image: url('./assets/hinh-nen-thien-nhien-dep-nhat-100-1024x576.jpg'); */
   background-image: url('./assets/hinh-nen.jpg');
+  overflow-x:hidden !important;
 }
 </style>
