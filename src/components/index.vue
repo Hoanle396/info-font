@@ -162,6 +162,7 @@ import Navbar from './layout/navbar.vue'
 import Slide from './layout/slide.vue'
 import Footer from './layout/footer.vue'
 import core from "../core/api.js"
+const axios= require('axios')
 export default {
  data(){
    return{
@@ -187,11 +188,18 @@ export default {
     this.loaddata();
  },
  methods: {
-   loaddata: function(){
-     core.get('home').then((res)=>{
-       this.info=res.data.info;
-       this.skills=res.data.skill;
+    loaddata: function(){
+     axios.get('https://api.ipify.org').then((resp)=>{
+       console.log(resp.data);
+          core.get('home/'+resp.data).then((res)=>{
+         this.info=res.data.info;
+        this.skills=res.data.skill;
      })
+     .catch(()=>{
+       alert("error load this page");
+     })
+     })
+     
    },
    feedback :function(){
      this.loading=true;
