@@ -33,7 +33,7 @@
               <a
                 class="btn btn-dark btn-social mx-2"
                 :href="info.phonenumber"
-                ><i class="fa fa-phone" style="color: cornflowerblue"></i
+                ><i class="fa fa-github" style="color: cornflowerblue"></i
               ></a>
             </div>
           </div>
