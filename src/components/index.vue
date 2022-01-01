@@ -1,5 +1,11 @@
 <template>
-  <div>
+<div>
+  <div v-if="loadd" class="container">
+      <div class="row justify-content-center">
+          <div class="loader"></div>
+      </div>
+  </div>
+  <div v-if="!loadd">
     <Navbar/>
     <Slide/>
     <section id="infomation" v-if="info">
@@ -156,12 +162,14 @@
     
     <Footer/>
   </div>
+  </div>
 </template>
 <script>
 import Navbar from './layout/navbar.vue'
 import Slide from './layout/slide.vue'
 import Footer from './layout/footer.vue'
 import core from "../core/api.js"
+const axios= require('axios')
 export default {
  data(){
    return{
@@ -176,6 +184,7 @@ export default {
      error:null,
      loading:false,
      success:false,
+     loadd:true,
    }
  },
   components:{
@@ -188,10 +197,18 @@ export default {
  },
  methods: {
    loaddata: function(){
-     core.get('home').then((res)=>{
-       this.info=res.data.info;
-       this.skills=res.data.skill;
+     axios.get('https://api.ipify.org').then((resp)=>{
+       console.log(resp.data);
+          core.get('home/'+resp.data).then((res)=>{
+         this.info=res.data.info;
+        this.skills=res.data.skill;
+        this.loadd=false;
      })
+     .catch(()=>{
+       alert("error load this page");
+     })
+     })
+     
    },
    feedback :function(){
      this.loading=true;
@@ -199,15 +216,16 @@ export default {
      this.error=false;
       core.post('feedback',this.contact).then(()=>{
         this.success=true;
+        this.loading=false;
         this.contact.fullname="";
         this.contact.email="";
         this.contact.subject="";
         this.contact.content="";
       })
       .catch((err)=>{
+        this.loading=false;
         this.error=err.response.data.error;
       })
-     this.loading=false;
    }
  }
 };
@@ -236,5 +254,28 @@ export default {
  100% {
     transform: rotate(360deg);
   }
+}
+.loader {
+  margin-top: 20%;
+  border: 26px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 26px solid violet;
+  border-right: 26px solid rgb(77, 2, 83);
+  border-bottom: 26px solid lightcoral;
+  border-left: 26px solid pink;
+  width: 180px;
+  height: 180px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 </style>
