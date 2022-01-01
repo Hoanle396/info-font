@@ -1,5 +1,11 @@
 <template>
   <div>
+  <div v-if="loadd" class="container">
+      <div class="row justify-content-center">
+          <div class="loader"></div>
+      </div>
+  </div>
+  <div v-if="!loadd">
     <Navbar/>
     <Slide/>
     <section id="infomation" v-if="info">
@@ -156,6 +162,7 @@
     
     <Footer/>
   </div>
+   </div>
 </template>
 <script>
 import Navbar from './layout/navbar.vue'
@@ -177,6 +184,7 @@ export default {
      error:null,
      loading:false,
      success:false,
+     loadd:true,
    }
  },
   components:{
@@ -194,6 +202,7 @@ export default {
           core.get('home/'+resp.data).then((res)=>{
          this.info=res.data.info;
         this.skills=res.data.skill;
+        this.loadd=false;
      })
      .catch(()=>{
        alert("error load this page");
@@ -245,5 +254,28 @@ export default {
  100% {
     transform: rotate(360deg);
   }
+}
+.loader {
+  margin-top: 20%;
+  border: 26px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 26px solid violet;
+  border-right: 26px solid rgb(77, 2, 83);
+  border-bottom: 26px solid lightcoral;
+  border-left: 26px solid pink;
+  width: 180px;
+  height: 180px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 </style>
