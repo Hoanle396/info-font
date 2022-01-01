@@ -259,10 +259,10 @@ export default {
   margin-top: 20%;
   border: 26px solid #f3f3f3;
   border-radius: 50%;
-  border-top: 26px solid violet;
-  border-right: 26px solid rgb(77, 2, 83);
-  border-bottom: 26px solid lightcoral;
-  border-left: 26px solid pink;
+  border-top: 26px solid #FF4500;
+  border-right: 26px solid 	#FF1493;
+  border-bottom: 26px solid #DC143C;
+  border-left: 26px solid 	#C71585;
   width: 180px;
   height: 180px;
   -webkit-animation: spin 2s linear infinite;
