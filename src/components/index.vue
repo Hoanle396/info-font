@@ -257,7 +257,7 @@ export default {
 }
 .loader {
   margin-top: 20%;
-  border: 26px solid #f3f3f3;
+  border: 16px solid #f3f3f3;
   border-radius: 50%;
   border-top: 26px solid #FF4500;
   border-right: 26px solid 	#FF1493;
