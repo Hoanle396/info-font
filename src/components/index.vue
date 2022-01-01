@@ -1,6 +1,6 @@
 <template>
   <div>
-  <div v-if="loadd" class="container">
+  <div v-if="loadd">
       <div class="row justify-content-center">
           <div class="loader"></div>
       </div>
