@@ -1,48 +1,13 @@
 <template>
-    <div data-aos="flip-up"
+    <div data-aos="fade-up"
      data-aos-easing="ease-out-cubic"
      data-aos-duration="3000">
        <footer class="footer" id="fh5co-footer">
         <div class="container">
-            <div class="row row-pb-md">
-                <div class="col-lg-3 col-sm-12 mb-4 fh5co-widget">
-                    <img src="../../assets/logo.png" alt="">
-                </div>
-                <div class="col-lg-3 col-sm-4 mb-4 active">
-                    <ul class="fh5co-footer-links">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Help</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Terms</a></li>
-                        <li><a href="#">Meetups</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-3 col-sm-4 mb-4 active">
-                  <ul class="fh5co-footer-links">
-                      <li><a href="#">Facebook</a></li>
-                      <li><a href="#">Instagram</a></li>
-                      <li><a href="#">Youtube</a></li>
-                      <li><a href="#">Whatsapp</a></li>
-                      <li><a href="#">Linkedin</a></li>
-                  </ul>
-              </div>
-
-              <div class="col-lg-3 col-sm-4 mb-4 active">
-                  <ul class="fh5co-footer-links">
-                      <li><a href="#">hoanle396@gmail.com </a></li>
-                      <li><a href="#">0345648638 </a></li>
-                      <li><a href="#">470 Tran Dai Nghia, Quan Ngu Hanh Son</a></li>
-                      <li><a href="#">Hoàn Lê</a></li>
-                  </ul>
-              </div>
-
-            </div>
-
             <div class="row copyright">
-                <div class="col-lg-12 col-sm-12 mb-12 text-center">
+                <div class="col-lg-12 col-sm-12 mb-1 text-center">
                     <p>
-                        <small class="block">2021 &copy; All Rights Reserved.</small>
+                        <small class="block">2022 &copy; All Rights Reserved.</small>
                    </p>
                     <ul class="fh5co-social-icons">
                         <li><a href="#"><i class="fab fa-facebook" ></i></a></li>
