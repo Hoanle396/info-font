@@ -1,5 +1,5 @@
 <template>
-    <div data-aos="fade-up"
+    <div data-aos="fade-down"
      data-aos-easing="ease-out-cubic"
      data-aos-duration="3000">
        <footer class="footer" id="fh5co-footer">
@@ -34,7 +34,6 @@ export default {
 <style>
 .footer {
     padding-top: 2%;
-    border-top: 2px solid gray;
     text-align: left;
     font-size: 0.9rem;
     font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
