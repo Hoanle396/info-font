@@ -1,7 +1,7 @@
 <template>
     <nav class="navbar navbar-expand-lg fixed-top" data-aos="fade-up" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href=""><img src="../../assets/logo.png" width="50" /></a>
+            <a class="navbar-brand js-scroll-trigger" href=""><img src="https://i.ibb.co/h7gND7f/Untitled-2.png" height="50" /></a>
              <button
           class="navbar-toggler navbar-toggler-right"
           type="button"
