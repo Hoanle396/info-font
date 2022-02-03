@@ -1,12 +1,10 @@
 <template>
-<div>
   <div v-if="loadd">
       <div class="row justify-content-center">
-         <div id="preloader">
-  <div id="loader"></div>
-</div>
+          <div id="preloader">
+            <div id="loader"></div>
+           </div>
       </div>
-  </div>
   <div v-if="!loadd">
     <Navbar/>
     <Slide/>
@@ -41,7 +39,7 @@
               <a
                 class="btn btn-dark btn-social mx-2"
                 :href="info.phonenumber"
-                ><i class="fa fa-phone" style="color: cornflowerblue"></i
+                ><i class="fab fa-github" style="color: cornflowerblue"></i
               ></a>
             </div>
           </div>
@@ -161,7 +159,6 @@
         </div>
       </div>
     </section>
-    
     <Footer/>
   </div>
   </div>
@@ -198,7 +195,7 @@ export default {
     this.loaddata();
  },
  methods: {
-   loaddata: function(){
+    loaddata: function(){
      axios.get('https://api.ipify.org').then((resp)=>{
        console.log(resp.data);
           core.get('home/'+resp.data).then((res)=>{
@@ -217,6 +214,7 @@ export default {
      this.success=false;
      this.error=false;
       core.post('feedback',this.contact).then(()=>{
+        this.loading=false;
         this.success=true;
         this.loading=false;
         this.contact.fullname="";
