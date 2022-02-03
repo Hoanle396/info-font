@@ -1,14 +1,14 @@
 <template>
     <nav class="navbar navbar-expand-lg fixed-top" data-aos="fade-up" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href=""><img src="../../assets/logo.png" width="50" /></a>
+            <a class="navbar-brand js-scroll-trigger" href=""><img src="https://i.ibb.co/qCq72fj/Untitled-1.png" width="50" /></a>
             <div >
                 <ul class="navbar-nav text-uppercase ml-auto">
-                    <li class="nav-item"><a class="nav-link text-" href="#index">Trang Đầu</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#infomation">Thông Tin</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skill">Kĩ Năng</a></li>
-                     <li class="nav-item"><a class="nav-link" href="#feedback">Phản Hồi</a></li>
-                    <li class="nav-item"><router-link class="nav-link" to="login">Đăng Nhập</router-link></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#index">Trang Đầu</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#infomation">Thông Tin</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#skill">Kĩ Năng</a></li>
+                     <li class="nav-item"><a class="nav-link text-white" href="#feedback">Phản Hồi</a></li>
+                    <li class="nav-item"><router-link class="nav-link text-white" to="login">Đăng Nhập</router-link></li>
                 </ul>
             </div>
         </div>
@@ -16,9 +16,6 @@
 </template>
 <script>
 export default {
-    props:{
-        msg:{}
-    }
 }
 </script>
 <style>
