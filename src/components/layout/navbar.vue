@@ -2,7 +2,6 @@
     <nav class="navbar navbar-expand-lg fixed-top" data-aos="fade-up" id="mainNav">
         <div class="container">
             <a class="navbar-brand js-scroll-trigger" href=""><img src="https://i.ibb.co/qCq72fj/Untitled-1.png" width="50" /></a>
-            <div >
              <button
           class="navbar-toggler navbar-toggler-right"
           type="button"

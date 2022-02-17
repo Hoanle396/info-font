@@ -1,10 +1,12 @@
 <template>
+   <div>
   <div v-if="loadd">
       <div class="row justify-content-center">
           <div id="preloader">
             <div id="loader"></div>
-           </div>
+          </div>
       </div>
+  </div>   
   <div v-if="!loadd">
     <Navbar/>
     <Slide/>
@@ -69,7 +71,8 @@
                 :href="skill.docs"
                 :style="{'text-decoration':'none'}"
               >
-                <i :class="skill.logo" :style="{'color':skill.color}" class="fa-8x"></i>
+                <!-- <i :class="skill.logo" :style="{'color':skill.color}" class="fa-8x"></i> -->
+                <img  width="100px" :src="skill.logo" />
                  
               </a>
               <div class="portfolio-caption">
@@ -200,11 +203,13 @@ export default {
        console.log(resp.data);
           core.get('home/'+resp.data).then((res)=>{
          this.info=res.data.info;
-        this.skills=res.data.skill;
-        this.loadd=false;
+        this.skills=res.data.skill;      
      })
      .catch(()=>{
        alert("error load this page");
+     })
+     .finally(()=>{
+       this.loadd=false;
      })
      })
      

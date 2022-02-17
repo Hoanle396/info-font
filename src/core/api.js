@@ -1,5 +1,5 @@
 const axios = require('axios');
-const APIUrl = 'https://laravelmyapp.herokuapp.com/api';
+const APIUrl = 'https://laravelmyapp.herokuapp.com/api/';
 export default {
     getHeaders() {
         let token = window.localStorage.getItem('token');
