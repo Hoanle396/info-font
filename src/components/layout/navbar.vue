@@ -16,11 +16,11 @@
         </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ml-auto">
-                    <li class="nav-item"><a class="nav-link text-white" href="#index">Trang Đầu</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#infomation">Thông Tin</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#skill">Kĩ Năng</a></li>
-                     <li class="nav-item"><a class="nav-link text-white" href="#feedback">Phản Hồi</a></li>
-                    <li class="nav-item"><router-link class="nav-link text-white" to="login">Đăng Nhập</router-link></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#index">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#infomation">Infomation</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#skill">Skills</a></li>
+                     <li class="nav-item"><a class="nav-link text-white" href="#feedback">Feedback</a></li>
+                    <li class="nav-item"><router-link class="nav-link text-white" to="login">Login</router-link></li>
                 </ul>
             </div>
         </div>
