@@ -51,7 +51,7 @@
     <section class="page-section" v-if="info">
       <div class="container">
           <div class="text-center">
-          <h3 class="text-uppercase text-warning">Đôi dòng giới thiệu</h3>
+          <h3 class="text-uppercase text-warning">Information</h3>
         </div>
         <p class="text-center text-white text-justify">
           {{info.description}}
@@ -61,7 +61,7 @@
     <section class="page-section" id="skill" v-if="skills">
       <div class="container">
         <div class="text-center">
-          <h2 class="text-uppercase text-warning">Kĩ năng công việc</h2>
+          <h2 class="text-uppercase text-warning">Skills for work</h2>
         </div>
         <div class="row mt-3">
           <div class="col-lg-4 col-sm-6 mb-4" data-aos="zoom-in"  data-aos-easing="ease-out-cubic" data-aos-duration="2000" v-for="skill in skills" :key="skill.id">
@@ -89,7 +89,7 @@
           <div class="col-lg-4">
             <div class="info">
               <div class="address">
-                <h4 class="text-danger text-warning">Địa Chỉ</h4>
+                <h4 class="text-danger text-warning">Address:</h4>
                 <p class="text-danger text-warning">470, Trần Đại Nghĩa, Ngũ Hành Sơn, Đà Nẵng</p>
               </div>
               <div class="email">
@@ -97,7 +97,7 @@
                 <p class="text-danger text-warning">hoanle396@gmail.com</p>
               </div>
               <div class="phone">
-                <h4 class="text-danger text-warning">Số Điện Thoại:</h4>
+                <h4 class="text-danger text-warning">Phone number:</h4>
                 <p class="text-danger text-warning">+84 345 648 638</p>
               </div>
             </div>
@@ -114,7 +114,7 @@
                   <input
                     type="text"
                     class="form-control"
-                    placeholder="Họ Và Tên"
+                    placeholder="Full Name"
                     v-model="contact.fullname"
                     required
                   />
@@ -123,7 +123,7 @@
                   <input
                     type="email"
                     class="form-control"
-                    placeholder="Địa Chỉ Email"
+                    placeholder="Email Address"
                     v-model="contact.email"
                     required
                   />
@@ -133,7 +133,7 @@
                 <input
                   type="text"
                   class="form-control"
-                  placeholder="Tiêu Đề"
+                  placeholder="Subject"
                   v-model="contact.subject"
                   required
                 />
@@ -142,19 +142,19 @@
                 <textarea
                   class="form-control"
                   rows="5"
-                  placeholder="Nội Dung"
+                  placeholder="Message"
                   v-model="contact.content"
                   required
                 ></textarea>
               </div>
               <div class="my-3">
-                <div v-if="loading" class="text-warning">Đang Gửi</div>
+                <div v-if="loading" class="text-warning">Sendding</div>
                 <div v-if="error" class="text-danger">{{error}}</div>
-                <div v-if="success" class="text-success">Phản hồi của bạn đã được gửi. Cảm ơn bạn!</div>
+                <div v-if="success" class="text-success">Your Feedback has been sent. Thank you!</div>
               </div>
               <div class="text-center">
                 <button type="submit" class="btn btn-primary rounded-pill">
-                  Gửi Phản Hồi
+                  Send
                 </button>
               </div>
             </form>
