@@ -1,9 +1,9 @@
 <template>
-    <nav class="navbar navbar-expand-lg fixed-top" data-aos="fade-up" id="mainNav">
+    <nav class="navbar navbar-expand-md fixed-top" data-aos="fade-up" id="mainNav">
         <div class="container">
             <a class="navbar-brand js-scroll-trigger" href=""><img src="https://i.ibb.co/qCq72fj/Untitled-1.png" width="100" /></a>
              <button
-          class="navbar-toggler navbar-toggler-right"
+          class="navbar-toggler navbar-toggler-right border-0 focus-0"
           type="button"
           data-toggle="collapse"
           data-target="#navbarResponsive"
@@ -59,5 +59,9 @@ header.masthead .masthead-heading {
     line-height: 3.25rem;
     margin-bottom: 2rem;
     font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.focus-0 {
+    outline: none !important;
+    box-shadow: none !important;
 }
 </style>
